@@ -16,28 +16,74 @@
         }
         .item{
             margin:0 auto;
-            background:#909399;
-            /* overflow: visible; */
+            /* background:#909399; */
+            overflow: visible;
         }
         .item-a{
-            background:#409EFF;
+            /* background:#409EFF; */
             transform: rotate(30deg);
-            /* visibility: hidden; */
         }
         .item-b{
-            background:#67C23A;
+            /* background:#67C23A; */
             transform: rotate(-60deg);
-            /* visibility: hidden; */
         }
         .item-c{
-            background:#F56C6C;
+            /* background:#F56C6C; */
             transform: rotate(-60deg);
-            /* visibility: visible; */
+            position: relative;
         }
         .item-c img{
             transform: rotate(90deg);
             width:180%;
             margin-left:-90px;
+            transition: all .2s;
+        }
+        .item-c:hover .name{
+            margin-bottom:0;
+        }
+        .item-c:hover .type{
+            margin-top:0;
+        }
+        .item-c::after{
+            content:'';
+            position: absolute;
+            top:0;
+            width:100%;
+            height:100%;
+            background:#000;
+            opacity: 0;
+        }
+        .item-c:hover::after{
+            opacity: .5;
+        }
+        .item-c:hover img{
+            transform: rotate(90deg) scale(1.2);
+        }
+        .overlay{
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left:0;
+            top:0;
+            width:220px;
+            height:290px;
+        }
+
+        .overlay p{
+            margin:0;
+            color:#fff;
+            text-align: center;
+            overflow: hidden;
+            transition: all .2s;
+        }
+        .overlay .name{
+            margin-bottom:110px;
+        }
+        .overlay .type{
+            margin-top:110px;
         }
     </style>
 </head>
@@ -47,7 +93,11 @@
             <div class="box item-a">
                 <div class="box item-b">
                     <div class="box item-c">
-                        <!-- <img src="images/gzhd.jpg" alt=""> -->
+                        <img src="images/gzhd.jpg" alt="">
+                        <div class="overlay">
+                            <p class="name">塔利斯卡</p>
+                            <p class="type">司职中场</p>
+                        </div>
                     </div>
                 </div>
             </div>
