@@ -12,23 +12,32 @@
         .box{
             width:220px;
             height:290px;
-            /* overflow: hidden; */
+            overflow: hidden;
         }
         .item{
             margin:0 auto;
             background:#909399;
+            /* overflow: visible; */
         }
         .item-a{
             background:#409EFF;
             transform: rotate(30deg);
+            /* visibility: hidden; */
         }
         .item-b{
             background:#67C23A;
             transform: rotate(-60deg);
+            /* visibility: hidden; */
         }
         .item-c{
             background:#F56C6C;
             transform: rotate(-60deg);
+            /* visibility: visible; */
+        }
+        .item-c img{
+            transform: rotate(90deg);
+            width:180%;
+            margin-left:-90px;
         }
     </style>
 </head>
