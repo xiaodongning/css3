@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css实现多边形</title>
+    <style>
+        .wrap{
+            margin:50px;
+        }
+        .box{
+            width:220px;
+            height:290px;
+            /* overflow: hidden; */
+        }
+        .item{
+            margin:0 auto;
+            background:#909399;
+        }
+        .item-a{
+            background:#409EFF;
+            transform: rotate(30deg);
+        }
+        .item-b{
+            background:#67C23A;
+            transform: rotate(-60deg);
+        }
+        .item-c{
+            background:#F56C6C;
+            transform: rotate(-60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box item">
+            <div class="box item-a">
+                <div class="box item-b">
+                    <div class="box item-c">
+                        <!-- <img src="images/gzhd.jpg" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
